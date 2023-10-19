@@ -1,24 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 p {
   font-style: italic;
+}
+
+a {
+    background-color: #44803f;
+    margin: 5px;
+    border-radius: 30px;
+    padding: 5px;
 }
 
 h1 {
   font-family: helvetica, sans-serif, arial;
   text-align: center;
-  background-color: #fce200;
+  background-color: #FFEC5C;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
-  
 }
 
 h2 {
-  color: rgb(179, 29, 29);
-  background-color: #e1c4c4;
+  color: #2f2f2b;
+  background-color: #B4CF66;
+  margin-top: 15px;
 }
 
 tr {
-  background-color: #e1c4c4;
+  background-color: #B4CF66;
 }
 
 /* esto es un comentario en css y estoy comentando la propiedad de fondo para que se omita ese color, y se vea el amarillo */
@@ -31,7 +43,7 @@ img {
 }
 
 #news {
-  background-color: #e0d9d9;
+  background-color: #44803F
 }
 
 #colombia {
@@ -42,5 +54,13 @@ img {
 }
 
 .news-content {
-  background-color: rgb(112, 112, 205);
+  background-color: #146152;
+}
+
+.odd {
+  background-color: #B4CF66;
+}
+
+.even {
+  background-color: #FFEC5C;
 }
