@@ -2,6 +2,37 @@ p {
   font-style: italic;
 }
 
+h1 {
+  font-family: helvetica, sans-serif, arial;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(179, 29, 29);
+  background-color: #e1c4c4;
+}
+
+tr {
+  background-color: #e1c4c4;
+}
+
+/* esto es un comentario en css y estoy comentando la propiedad de fondo para que se omita ese color, y se vea el amarillo */
+td {
+  /* background-color: #8b5555; */ 
+}
+
+img {
+  float: center;
+}
+
+#news {
+  background-color: #e0d9d9;
+}
+
+#colombia {
+  background-color: yellow;
+}
+
 .news-content {
-  background-color: blue;
+  background-color: rgb(112, 112, 205);
 }
