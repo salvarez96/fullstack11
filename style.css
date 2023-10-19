@@ -5,6 +5,11 @@ p {
 h1 {
   font-family: helvetica, sans-serif, arial;
   text-align: center;
+  background-color: #fce200;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  
 }
 
 h2 {
@@ -31,6 +36,9 @@ img {
 
 #colombia {
   background-color: yellow;
+}
+
+#main-photo {
 }
 
 .news-content {
