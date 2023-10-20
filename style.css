@@ -1,6 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
+  /*margin: 0;
+  padding: 0; */
+  font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -43,7 +44,10 @@ img {
 }
 
 #news {
-  background-color: #44803F
+  background-color: #44803F;
+  display: flex;
+  flex-direction: column-reverse;
+}
 }
 
 #colombia {
@@ -51,6 +55,10 @@ img {
 }
 
 #main-photo {
+}
+
+#ai-photo {
+  display: none;
 }
 
 .news-content {
