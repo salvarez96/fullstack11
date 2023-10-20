@@ -48,7 +48,6 @@ img {
   display: flex;
   flex-direction: column-reverse;
 }
-}
 
 #colombia {
   background-color: yellow;
@@ -58,7 +57,7 @@ img {
 }
 
 #ai-photo {
-  display: none;
+  display: block;
 }
 
 .news-content {
@@ -71,4 +70,24 @@ img {
 
 .even {
   background-color: #FFEC5C;
+}
+
+@media only screen and (max-width: 600px) {
+
+  header {
+    padding: 10px;
+  }
+
+  #main-photo {
+    max-width: 100%;
+  }
+
+  #ai-photo {
+    display: none;
+  }
+
+  .news {
+    border: 1px solid;
+    margin: 10px;
+  }
 }
