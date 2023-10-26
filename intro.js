@@ -201,6 +201,6 @@ function saludar(persona, edad = 19){
 
 
 saludar("santiago", 15);
-//ejemplosCondiciones();
-//ejemploCiclos();
+ejemplosCondiciones();
+ejemploCiclos();
 saludar(persona.nombre);
