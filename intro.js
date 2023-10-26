@@ -192,15 +192,15 @@ function ejemploCiclos() {
 
 // funciones
 
-function saludar(){
-  console.log("hola te doy la bienvenida a mi programa");
-  if(persona.edad >= 18){
+function saludar(persona, edad = 19){
+  console.log("hola, " + persona + " te doy la bienvenida a mi programa");
+  if(edad >= 18){
     console.log("puedes jugar");
   }
 }
 
 
-saludar();
-ejemplosCondiciones();
-ejemploCiclos();
-saludar();
+saludar("santiago", 15);
+//ejemplosCondiciones();
+//ejemploCiclos();
+saludar(persona.nombre);
