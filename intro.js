@@ -85,7 +85,7 @@ function ejemplosCondiciones(){
 
   // condicional con el operador OR ||
   if(persona.cedula || persona.pasaporte){
-    console.log("Puede salir del pais");
+    console.info("Puede salir del pais");
   } else {
     console.log("No puede salir del pais");
   }
@@ -116,7 +116,7 @@ function ejemplosCondiciones(){
       console.log("Hoy es jueves");
       break;
     case "viernes":
-      console.log("porfin es viernes")
+      console.warn("porfin es viernes")
       break;
     case "sabado":
       console.log("Hoy es sabado");
