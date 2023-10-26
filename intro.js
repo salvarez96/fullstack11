@@ -155,11 +155,35 @@ console.log("3 elefantes se balanceaban sobre la tela de una araña, como veian 
 console.log("4 elefantes se balanceaban sobre la tela de una araña, como veian que resistia fueron a llamar a otro elefante");
 console.log("5 elefantes se balanceaban sobre la tela de una araña, como veian que resistia fueron a llamar a otro elefante"); */
 
-for(let contador = 1; contador <= 10; contador++){
+console.log("un elefante se balanceaba sobre la tela de una araña, como veia que resistia fue a llamar a otro elefante");
 
-  if(contador == 1){
-    console.log("un elefante se balanceaba sobre la tela de una araña, como veia que resistia fue a llamar a otro elefante");
-  }else {
+for(let contador = 2; contador <= 5; contador++){
     console.log(contador + " elefantes se balanceaban sobre la tela de una araña, como veian que resistia fueron a llamar a otro elefante");
-  }
 }
+
+for(let i = 0; i< nombres.length; i++){
+  console.log(nombres[i]);
+}
+
+// while, mientras
+
+while(persona.edad < 30){
+  console.log("para ser treinton te faltan " + (30 - persona.edad) + " años");
+  // aqui incrementamos la edad de la persona de dos en dos
+  persona.edad+=2;
+}
+
+// do while, haz mientras
+
+let opcion = 3;
+
+do{
+  console.log("bienvenid@s a Mario Kart");
+  console.log("1. Jugar");
+  console.log("2. Configuracion");
+  console.log("3. Multijugador");
+  console.log("4. Salir");
+
+  opcion++;
+
+}while(opcion != 4);
