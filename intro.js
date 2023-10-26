@@ -143,3 +143,23 @@ persona.sexo == "M" ? console.log("Es un hombre") : console.log("Es una mujer");
 persona.semanasCotizadas >= 1300 && persona.edad >= edadPensionMasculina && persona.sexo == "M" ? console.log("Puede pensionarse") : console.log("No puede pensionarse");
 
 persona.cedula || persona.pasaporte ? console.log("Puede salir del pais") : console.log("No puede salir del pais");
+
+
+// ciclos, bucles, loops
+
+// for
+
+/* console.log("un elefante se balanceaba sobre la tela de una araña, como veia que resistia fue a llamar a otro elefante");
+console.log("2 elefantes se balanceaban sobre la tela de una araña, como veian que resistia fueron a llamar a otro elefante");
+console.log("3 elefantes se balanceaban sobre la tela de una araña, como veian que resistia fueron a llamar a otro elefante");
+console.log("4 elefantes se balanceaban sobre la tela de una araña, como veian que resistia fueron a llamar a otro elefante");
+console.log("5 elefantes se balanceaban sobre la tela de una araña, como veian que resistia fueron a llamar a otro elefante"); */
+
+for(let contador = 1; contador <= 10; contador++){
+
+  if(contador == 1){
+    console.log("un elefante se balanceaba sobre la tela de una araña, como veia que resistia fue a llamar a otro elefante");
+  }else {
+    console.log(contador + " elefantes se balanceaban sobre la tela de una araña, como veian que resistia fueron a llamar a otro elefante");
+  }
+}
