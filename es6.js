@@ -1,16 +1,15 @@
 // returnos en una funcion
 
-function inicio() {
-  function saludar(nombre) {
+const inicio = () => {
+  // function tradicional
+  function saludar2(nombre) {
     return "hola " + nombre;
   }
-
-  function calcularNacimiento(edad) {
-    return 2023 - edad;
-  }
+  //funcion flecha, o arrow function
+  const saludar = (nombre) => `hola ${nombre}`;
+  const calcularNacimiento = (edad) => 2023 - edad;
 
   let nombrePersona = prompt("ingresa tu nombre");
-  let resultadoSaludo = saludar(nombrePersona);
 
   let edadPersona = prompt("ingresa tu edad");
   let resultadoCalculo = calcularNacimiento(edadPersona);
@@ -18,7 +17,7 @@ function inicio() {
   //let result = resultadoSaludo + " tu año de nacimiento es " + resultadoCalculo;
 
   //esto es un template string
-  let result = `${resultadoSaludo} tu año de nacimiento es ${resultadoCalculo}`;
+  let result = `${saludar(nombrePersona)} tu año de nacimiento es ${resultadoCalculo}`;
 
   console.log(result);
 }
