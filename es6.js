@@ -77,4 +77,56 @@ const arrayMethods = () => {
 
 arrayMethods();
 
-console.log(identification);
+// console.log(identification);
+
+// hoisting
+const hoisting = () => {
+  const year = 2023;
+  console.log(year);
+
+  // forma incorrecta de llamr una funcion
+  testFunction();
+
+  function testFunction() {
+    console.log("soy una función de prueba");
+  }
+
+  // forma correcta de llamar una funcion
+
+  const testFunction2 = () => {
+    console.log("soy una función de prueba 2");
+  }
+
+  testFunction2();
+  
+}
+
+hoisting();
+
+const demoCallback = () => {
+
+  const saludar = (funcion) => {
+    console.log("hola mundo");
+    funcion();
+  }
+
+  const despedir = () => {
+    console.log("adios");
+  }
+
+  saludar(despedir);
+
+  const timer = (fn) => {
+    console.log('la siguiente función se ejecutará en 5 segundos');
+    setTimeout(fn, 5000);
+  }
+
+  timer(despedir);
+
+  setTimeout(() => {
+    console.log("han pasado 4 segundos");
+  } , 4000);
+
+}
+
+demoCallback();
