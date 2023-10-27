@@ -1,5 +1,8 @@
 // returnos en una funcion
 
+let month = "october";
+let passPort = "1234567890";
+
 const inicio = () => {
   // function tradicional
   function saludar2(nombre) {
@@ -28,41 +31,50 @@ const inicio = () => {
 // IIFE
 // inmediately invoked function expression
 (function () {
-  console.log("hola mundo");
+  let month = "november";
+  let identification = "1088123456";
+  console.log(`hola mundo ${month} ${identification} ${passPort}`);
 })();
 
 // arrays
 
-const baloto = [18, 28, 38, 80, 90];
-console.log(baloto);
+const arrayMethods = () => {
 
-// agregar un elemento al final del array
-baloto.push(30);
-console.log(baloto);
+  const baloto = [18, 28, 38, 80, 90];
+  console.log(baloto);
 
-// agregar un elemento al inicio del array
-baloto.unshift(4);
-console.log(baloto);
+  // agregar un elemento al final del array
+  baloto.push(30);
+  console.log(baloto);
 
-// eliminar el ultimo elemento del array
-baloto.pop();
-console.log(baloto);
+  // agregar un elemento al inicio del array
+  baloto.unshift(4);
+  console.log(baloto);
 
-// eliminar el primer elemento del array
-baloto.shift();
-console.log(baloto);
+  // eliminar el ultimo elemento del array
+  baloto.pop();
+  console.log(baloto);
 
-// map, con map podemos retornar el valor en una variable
-const array2 = baloto.map((item) => item = item * 2);
+  // eliminar el primer elemento del array
+  baloto.shift();
+  console.log(baloto);
 
-console.log(array2);
+  // map, con map podemos retornar el valor en una variable
+  const array2 = baloto.map((item) => item = item * 2);
 
-// foreach, con foreach no podemos retornar el valor en una variable
-baloto.forEach((el) => {
-  console.log(el);
-});
+  console.log(array2);
 
-// filter, con filter podemos filtrar los elementos de un array
-const filteredNumbers = baloto.filter((el) => el >= 30);
-console.log(filteredNumbers);
+  // foreach, con foreach no podemos retornar el valor en una variable
+  baloto.forEach((el) => {
+    console.log(el);
+  });
 
+  // filter, con filter podemos filtrar los elementos de un array
+  const filteredNumbers = baloto.filter((el) => el >= 30);
+  console.log(filteredNumbers);
+
+}
+
+arrayMethods();
+
+console.log(identification);
