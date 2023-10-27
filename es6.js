@@ -127,6 +127,57 @@ const demoCallback = () => {
     console.log("han pasado 4 segundos");
   } , 4000);
 
+  // setInterval se ejecuta cada cierto tiempo
+  const seDespideMasQueCirco = setInterval(despedir, 2000);
+
+  // detener un intervalo
+  const intervalo = setInterval(() => {
+    console.log("universidad");
+  }, 1000);
+
+  setTimeout(() => {
+    clearInterval(intervalo);
+    clearInterval(seDespideMasQueCirco);
+  }, 6000);
+
+  // poner un reloj en la consola javascript
+  /*   const reloj = setInterval(() => {
+      let date = new Date();
+      console.log(`${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+    }) */
+
 }
 
-demoCallback();
+// demoCallback();
+
+
+// promesas
+
+const demoPromesas = () => {
+
+  let promesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("la promesa se resolvió a los dos segundos");
+    }, 2000);
+  })
+
+  promesa
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error));
+
+  let promesa2 = new Promise((resolve, reject) => {
+    let number = Math.floor(Math.random() * 10);
+    if(number % 2 === 0) {
+      resolve(number);
+    } else {
+      reject(number);
+    }
+  });
+
+  promesa2
+  .then((el) => console.info(`el número ${el} es par`))
+  .catch((error) => console.error(`el número ${error} es impar`));
+
+}
+
+demoPromesas();
