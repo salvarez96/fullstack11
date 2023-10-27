@@ -15,7 +15,12 @@ function inicio() {
   let edadPersona = prompt("ingresa tu edad");
   let resultadoCalculo = calcularNacimiento(edadPersona);
 
-  console.log(resultadoSaludo + " tu año de nacimiento es " + resultadoCalculo);
+  //let result = resultadoSaludo + " tu año de nacimiento es " + resultadoCalculo;
+
+  //esto es un template string
+  let result = `${resultadoSaludo} tu año de nacimiento es ${resultadoCalculo}`;
+
+  console.log(result);
 }
 
 inicio();
