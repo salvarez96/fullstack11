@@ -181,3 +181,31 @@ const demoPromesas = () => {
 }
 
 demoPromesas();
+
+const multiplePromises = () => {
+
+  const getJugadores = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("traje los datos de la API de la seleccion en 2 segundos");
+    }, 2000);
+  })
+
+  const saveStatsDB = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("guardé las estadísticas en la base de datos en 3 segundos");
+    }, 3000);
+  })
+
+  const exportToExcel = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("exporté el archivo en excel en 4 segundos");
+    }, 4000);
+  })
+
+  Promise.all([getJugadores, saveStatsDB, exportToExcel])
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error));
+
+}
+
+multiplePromises();
