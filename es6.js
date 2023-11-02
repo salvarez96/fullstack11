@@ -209,3 +209,35 @@ const multiplePromises = () => {
 }
 
 multiplePromises();
+
+const demoAsyncAwait = async () => {
+  const getEstadios = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("traje los datos de los estadios API de la seleccion en 5 segundos");
+    }, 2000);
+  })
+
+  const responseAPIEstadios = await getEstadios;
+  console.log(responseAPIEstadios);
+
+  const saveStadiumsDB = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("guardé los estadios en la base de datos en 2.5 segundos");
+    }, 2500);
+  })
+
+  const responseDBStadiums = await saveStadiumsDB;
+  console.log(responseDBStadiums);
+
+  const exportToExcel = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("exporté el archivo en excel en 2.8 segundos");
+    }, 2800);
+  })
+
+  const responseExcel = await exportToExcel;
+  console.log(responseExcel);
+
+}
+
+demoAsyncAwait();
