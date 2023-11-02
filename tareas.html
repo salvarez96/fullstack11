@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gestor tareas</title>
+</head>
+<body>
+
+  <h1>Mis tareas pendientes</h1>
+
+  <!-- formulario para agregar/editar tareas -->
+  <form id="task-form">
+    <input type="text" id="task-input" placeholder="Escribe una tarea" required>
+    <button type="submit">Agregar/Editar</button>
+  </form>
+
+  <div id="tasks-container">
+    <!-- lista de tareas -->
+    <ul id="task-list">
+      <!-- aqui se agregan las tareas -->
+    </ul>
+  </div>
+
+  <script>
+    // array vacio para guardar las tareas e inicializar el indice de edicion
+    let tasks = [];
+    let editingIndex = -1;
+
+    // obtenemos elementos del DOM
+    const taskForm = document.getElementById('task-form');
+    const taskInput = document.getElementById('task-input');
+    const taskList = document.getElementById('task-list');
+
+    const deleteTask = (index) => {
+      tasks.splice(index, 1);
+      updateTaskList();
+    }
+
+    const editTask = (index) => {
+      taskInput.value = tasks[index];
+      editingIndex = index;
+    }
+
+    const updateTaskList = () => {
+      taskList.innerHTML = '';
+      tasks.forEach((task, index) => {
+        // creamos el elemento li
+        const li = document.createElement('li');
+        li.textContent = task;
+
+        // boton editar
+        const editBtn = document.createElement('button');
+        editBtn.textContent = 'Editar';
+        editBtn.addEventListener('click', () => editTask(index))
+
+        //boton eliminar
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Eliminar';
+        deleteBtn.addEventListener('click', () => deleteTask(index));
+
+        // agregamos los botones al li
+        li.appendChild(editBtn);
+        li.appendChild(deleteBtn);
+        taskList.appendChild(li);
+      })
+    }
+
+    // funcion para agregar tareas
+    const addTask = (task) => {
+      if(editingIndex === -1){
+        tasks.push(task);
+      }else {
+        tasks[editingIndex] = task;
+        editingIndex = -1;
+      }
+
+      taskInput.value = '';
+      updateTaskList();
+    }
+
+    taskForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const newTask = taskInput.value;
+      if(newTask) {
+        addTask(newTask);
+      }
+    })
+
+  </script>
+
+</body>
+</html>
