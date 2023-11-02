@@ -48,6 +48,9 @@
         // creamos el elemento li
         const li = document.createElement('li');
         li.textContent = task;
+        // le ponemos un id al li y una clase
+        li.setAttribute('id', index);
+        li.classList.add('list');
 
         // boton editar
         const editBtn = document.createElement('button');
