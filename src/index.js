@@ -1,6 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var operaciones = require("./calculadora");
+var DiaSemana;
+(function (DiaSemana) {
+    DiaSemana[DiaSemana["Lunes"] = 0] = "Lunes";
+    DiaSemana[DiaSemana["Martes"] = 1] = "Martes";
+    DiaSemana[DiaSemana["Miercoles"] = 2] = "Miercoles";
+    DiaSemana[DiaSemana["Jueves"] = 3] = "Jueves";
+    DiaSemana[DiaSemana["Viernes"] = 4] = "Viernes";
+    DiaSemana[DiaSemana["Sabado"] = 5] = "Sabado";
+    DiaSemana[DiaSemana["Domingo"] = 6] = "Domingo";
+})(DiaSemana || (DiaSemana = {}));
+console.log(DiaSemana[0]);
 var Persona = /** @class */ (function () {
     function Persona(nombre, edad) {
         this.nombre = nombre;

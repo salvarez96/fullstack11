@@ -1,6 +1,18 @@
 import * as operaciones from './calculadora';
 import Empleado from './empleado';
 
+enum DiaSemana {
+  Lunes,
+  Martes,
+  Miercoles,
+  Jueves,
+  Viernes,
+  Sabado,
+  Domingo,
+}
+
+console.log(DiaSemana[0]);
+
 class Persona {
   constructor(public nombre: string, public edad: number) {}
   numeroSuerte = (): number => Math.floor(Math.random() * 100);
