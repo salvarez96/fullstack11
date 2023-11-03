@@ -12,6 +12,19 @@ var Persona = /** @class */ (function () {
     };
     return Persona;
 }());
+var EmpleadoImpl = /** @class */ (function () {
+    function EmpleadoImpl(nombre, salario) {
+        this.nombre = nombre;
+        this.salario = salario;
+        this.pedirAumento = function () {
+            console.log('Necesito un aumento jefe');
+        };
+        this.getAntiguedad = function () { return 10; };
+    }
+    return EmpleadoImpl;
+}());
+var empleado1 = new EmpleadoImpl('Albeiro', 1000);
+empleado1.pedirAumento();
 var persona1 = new Persona('Albeiro de jesus', 25);
 persona1.saludar();
 console.log(operaciones.sumar(1, 2));
