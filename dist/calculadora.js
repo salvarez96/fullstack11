@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dividir = exports.multiplicar = exports.restar = exports.sumar = void 0;
-var sumar = function (a, b) { return a + b; };
+const sumar = (a, b) => a + b;
 exports.sumar = sumar;
-var restar = function (a, b) { return a - b; };
+const restar = (a, b) => a - b;
 exports.restar = restar;
-var multiplicar = function (a, b) { return a * b; };
+const multiplicar = (a, b) => a * b;
 exports.multiplicar = multiplicar;
-var dividir = function (a, b) { return a / b; };
+const dividir = (a, b) => a / b;
 exports.dividir = dividir;
