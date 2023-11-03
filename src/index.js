@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var operaciones = require("./calculadora");
 var Persona = /** @class */ (function () {
     function Persona(nombre, edad) {
         this.nombre = nombre;
@@ -9,5 +12,9 @@ var Persona = /** @class */ (function () {
     };
     return Persona;
 }());
-var persona1 = new Persona('Juan', 25);
+var persona1 = new Persona('Albeiro de jesus', 25);
 persona1.saludar();
+console.log(operaciones.sumar(1, 2));
+console.log(operaciones.restar(1, 2));
+console.log(operaciones.multiplicar(1, 2));
+console.log(operaciones.dividir(1, 2));

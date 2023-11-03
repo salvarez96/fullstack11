@@ -4,7 +4,7 @@
   "description": "ejercicios diplomado full stack",
   "main": "src/index.js",
   "scripts": {
-    "index": "./node_modules/.bin/tsc src/index.ts",
+    "index": "./node_modules/.bin/tsc src/index.ts -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

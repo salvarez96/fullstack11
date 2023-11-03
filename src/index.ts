@@ -8,7 +8,7 @@ class Persona {
   }
 }
 
-const persona1 = new Persona('Juan', 25);
+const persona1 = new Persona('Albeiro de jesus', 25);
 persona1.saludar();
 
 console.log(operaciones.sumar(1, 2));
