@@ -1,0 +1,28 @@
+{
+  "name": "fullstack11",
+  "version": "1.0.0",
+  "description": "ejercicios diplomado full stack",
+  "main": "src/index.js",
+  "scripts": {
+    "index": "./node_modules/.bin/tsc src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiaguf/fullstack11.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Santiago bernal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santiaguf/fullstack11/issues"
+  },
+  "homepage": "https://github.com/santiaguf/fullstack11#readme",
+  "dependencies": {
+    "typescript": "^5.2.2"
+  }
+}
