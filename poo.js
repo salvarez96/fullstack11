@@ -103,3 +103,31 @@ clienteDelMes.depositar(1000);
 console.log(clienteDelMes.getSaldo());
 clienteDelMes.retirar(600);
 console.log(clienteDelMes.getSaldo());
+
+// ejemplo 2 polimorfismo
+class FormaGeometrica {
+  area() {
+    // Método sin implementación específica
+  }
+}
+
+class Circulo extends FormaGeometrica {
+  constructor(radio) {
+    super();
+    this.radio = radio;
+  }
+  area() {
+    return Math.PI * this.radio * this.radio;
+  }
+}
+
+class Rectangulo extends FormaGeometrica {
+  constructor(ancho, alto) {
+    super();
+    this.ancho = ancho;
+    this.alto = alto;
+  }
+  area() {
+    return this.ancho * this.alto;
+  }
+}
