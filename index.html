@@ -6,13 +6,194 @@
   <meta author="Santiago Bernal">
   <link rel="icon" href="img/favicon.png" type="image/x-icon">
 
-  <title>inicio - Página de la seleccion Colombia</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Inicio - Página de la Seleccion Colombia</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    :root {
+      --primary-color: #900c3f;
+      --secondary-color: #c70039;
+      --tertiary-color: #f94c10;
+      --cuaternary-color: #f8de22;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      text-align: center;
+      font-size: calc(18rem / 16);
+    }
+
+    header {
+      padding: 25px 0;
+      min-height: 150px;
+      background-color: var(--secondary-color);
+    }
+
+    h1 {
+      padding-top: 25px;
+      font-size: calc(32rem / 16);
+    }
+
+    #menu {
+      width: 90%;
+      padding-bottom: 25px;
+      margin: 30px auto 0;
+    }
+
+    main {
+      min-width: 300px;
+      max-width: 720px;
+      margin: 50px auto;
+    }
+
+    .main-subtitle-container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .subtitles {
+      margin-top: 30px;
+    }
+
+    .subtitles::first-letter, 
+    h3::first-letter {
+      text-transform: uppercase;
+    }
+
+    #subtitles + p {
+      font-size: calc(15rem / 16);
+    }
+
+    #main-photo ,#ai-photo > img {
+      width: 80%;
+      max-width: 350px;
+      margin: 20px auto;
+      border-radius: 20px;
+      box-shadow: 0 0 8px 0 var(--secondary-color);
+    }
+
+    #main-photo {
+      max-width: 800px;
+    }
+
+    .news {
+      width: 90%;
+      max-width: 80dvw;
+      margin: 25px auto;
+      padding: 25px 35px;
+      border-radius: 10px;
+      border: 1px solid var(--primary-color);
+      text-align: left;
+      background-color: var(--cuaternary-color);
+      box-shadow: 0 0 8px 0 var(--secondary-color);
+    }
+
+    .main-news-heading {
+      text-align: center;
+    }
+
+    .main-news-heading h3 {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .main-news-heading p {
+      font-size: calc(14rem / 16);
+      margin-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--primary-color);
+    }
+    
+    .news-content {
+      text-align: justify;
+    }
+
+    .subscription-message {
+      margin-top: calc(35em / 16);
+      font-size: calc(14rem / 16);
+      text-align: center;
+      text-decoration: overline;
+      text-decoration-style: double;
+    }
+
+    .extra-info {
+      width: 80%;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 20px 0;
+      border: 2px double var(--primary-color);
+      border-radius: 15px;
+    }
+
+    .extra-info h3 {
+      padding: 20px 0 5px;
+    }
+
+    ul, ol {
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      margin: 0 auto;
+      border: 1px double black;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+    ul li:nth-child(1) {
+      max-width: 100px;
+      background-color: var(--cuaternary-color);
+    }
+
+    ul li:nth-child(2) {
+      margin: -1px auto;
+      max-width: 150px;
+      background-color: var(--tertiary-color);
+    }
+
+    ul li:nth-child(3) {
+      max-width: 200px;
+      background-color: var(--secondary-color);
+    }
+
+    ol li {
+      margin: 5px auto;
+    }
+
+    .even, .odd {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .even {
+      text-decoration: overline;
+    }
+
+    .odd:nth-of-type(n+2) {
+      text-decoration: overline;
+    }
+
+    .extra-info h3:nth-of-type(3) {
+      padding-bottom: 0;
+    }
+
+    footer {
+      min-height: 150px;
+      display: grid;
+      place-items: center;
+      background-color: var(--secondary-color);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,36 +204,37 @@
       <a href="goles.html" class="btn btn-secondary">goles</a>
       <a href="tabla.html" class="btn btn-secondary">tabla de posiciones</a>
       <a href="contacto.html" class="btn btn-secondary">contacto</a>
-      <a href="https://fcf.com.co/" class="btn btn-outline-warning" target="_blank">Sitio web oficial</a>
+      <a href="https://fcf.com.co/" rel=noopener class="btn btn-outline-warning" target="_blank">Sitio web oficial</a>
       <a href="#" id="no-press-me" class="btn btn-outline-danger">No me presiones</a>
     </div>
   </header>
   <main>
 
-    <h2>te queremos dar la bienvenida</h2>
-    <img id="main-photo" src="https://fcf.com.co/wp-content/uploads/2023/10/IMG_1121-1536x1024.jpeg" alt="futbolistas de la seleccion" width="700px" height="auto">
-    <p>te damos la bienvenida al sitio no oficial de la seleccion</p>
-
-
-    <div id="ai-photo">
-      <img src="https://image.lexica.art/full_jpg/88b57d0b-ba26-46be-976b-4487d2113b89" width="30%">
+    <div class="main-subtitle-container">
+      <h2 class="subtitles">te queremos dar la bienvenida</h2>
+      <p> al sitio no oficial de la seleccion</p>
     </div>
+    <img id="main-photo" src="https://fcf.com.co/wp-content/uploads/2023/10/IMG_1121-1536x1024.jpeg" alt="futbolistas de la seleccion" width="700px" height="auto">
 
-    <h2>Últimas noticias</h2>
+    <h2 class="subtitles">Últimas noticias</h2>
     <div id="news">
 
       <div id="news-1" class="news">
-        <h3>Colombia empató con Uruguay</h3>
-        <p>publicado hace 5 días</p>
+        <div class="main-news-heading">
+          <h3>Colombia empató con Uruguay</h3>
+          <p>publicado hace 5 días</p>
+        </div>
 
         <p class="news-content">Colombia empató 2-2 ante Uruguay en Barranquilla por la tercera fecha de las Eliminatorias Sudamericanas rumbo al Mundial de Norteamérica 2026. En uno de los duelos más atractivos de la jornada, el conjunto cafetero no pudo hacer valer la localía.
-          <div> recibe un 10% de descuento en tu camisa si te suscribes</div>
-              El equipo de Néstor Lorenzo comenzó ganando con un gran gol de James Rodríguez en la etapa inicial. No obstante, al minuto del epílogo, Matías Olivera empató tras una acción de pelota parada.</p>
+        El equipo de Néstor Lorenzo comenzó ganando con un gran gol de James Rodríguez en la etapa inicial. No obstante, al minuto del epílogo, Matías Olivera empató tras una acción de pelota parada.</p>
+        <div class="subscription-message"> <p> Recibe un 10% de descuento en tu camisa si te suscribes</p></div>
       </div>
 
       <div id="news-2" class="news">
-        <h3>Colombia empató con Ecuador (otra vez)</h3>
-        <p>publicado hace 21 horas</p>
+        <div class="main-news-heading">
+          <h3>Colombia empató con Ecuador (otra vez)</h3>
+          <p>publicado hace 21 horas</p>
+        </div>
 
         <p class="news-content">
           Colombia empató 0-0 con Ecuador en Quito por la segunda fecha de las Eliminatorias Sudamericanas rumbo al Mundial de Norteamérica 2026. En un duelo muy parejo, el conjunto cafetero no pudo hacer valer la localía.
@@ -60,51 +242,59 @@
         </p>
       </div>
 
+      <div id="ai-photo">
+        <img src="https://image.lexica.art/full_jpg/88b57d0b-ba26-46be-976b-4487d2113b89" alt="">
+      </div>
 
       <div id="news-3" class="news">
-        <h3>Colombia sigue invicta</h3>
-        <p>publicado hace 3 horas</p>
+        <div class="main-news-heading">
+          <h3>Colombia sigue invicta</h3>
+          <p>publicado hace 3 horas</p>
+        </div>
 
         <p class="news-content">
           Colombia empató 0-0 con Ecuador en Quito por la segunda fecha de las Eliminatorias Sudamericanas rumbo al Mundial de Norteamérica 2026. En un duelo muy parejo, el conjunto cafetero no pudo hacer valer la localía.
           El equipo de Néstor Lorenzo.
         </p>
       </div>
-
     </div>
 
+    <div class="extra-info">
+      <h3>jugadores destacados</h3>
+      <ul>
+        <li>James</li>
+        <li>Luis Díaz</li>
+        <li>Jhon Arias</li>
+      </ul>
+      
+      <h3>partidos</h3>
+      <ol>
+        <li class="odd">Colombia vs Venezuela</li>
+        <li class="even">Colombia vs Chile</li>
+        <li class="odd">Colombia vs Uruguay</li>
+        <li class="even">Colombia vs Ecuador</li>
+        <li class="odd">Colombia vs Brasil</li>
+      </ol>
 
-    <h3>jugadores destacados</h3>
-    <ul>
-      <li>James</li>
-      <li>Luis Diáz</li>
-      <li>Jhon Arias</li>
-    </ul>
-    <h3>partidos</h3>
-
-    <ol>
-      <li class="odd">Colombia vs Venezuela</li>
-      <li class="even">Colombia vs Chile</li>
-      <li  class="odd">Colombia vs Uruguay</li>
-      <li  class="even">Colombia vs Ecuador</li>
-      <li  class="odd">Colombia vs Brasil</li>
-    </ol>
-
-    <h3>tabla de posiciones</h3>
-
-    <a href="tabla.html">ver tabla</a>
-
-
+      <h3>tabla de posiciones</h3>
+      <a href="tabla.html">ver tabla</a>
+    </div>
+    
   </main>
   <footer>
     <img src="img/logo-fcf.png" alt="logo de la fcf" width="100px" height="auto">
 
   </footer>
-  <script src="intro.js"></script>
-  <script src="dom.js"></script>
+  <!-- <script src="intro.js"></script>
+  <script src="dom.js"></script> -->
 
   <script>
-    console.error("hola mundo");
+    const anchors = document.querySelectorAll('a')
+    anchors.forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault()
+      })
+    })
   </script>
 </body>
 </html>
