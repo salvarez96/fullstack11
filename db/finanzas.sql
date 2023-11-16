@@ -114,3 +114,35 @@ where valor_gasto > 10
 and id_categoria = 3
 order by valor_gasto desc
 limit 2;
+
+-- DQL - joins
+-- join básico
+
+select * from gastos g
+join categorias c
+on c.id_categoria = g.id_categoria ;
+
+-- join tres tablas
+select * from gastos g
+join categorias c
+on c.id_categoria = g.id_categoria
+join usuarios u
+on u.id_usuario = g.id_usuario ;
+
+-- campos específicos
+select  g.id_gasto , g.descripcion_gasto, g.valor_gasto, g.fecha_gasto, c.nombre_categoria, u.nombre_usuario  from gastos g
+join categorias c
+on c.id_categoria = g.id_categoria
+join usuarios u
+on u.id_usuario = g.id_usuario
+order by g.id_gasto asc;
+
+-- left join
+select * from gastos g
+left join categorias c
+on c.id_categoria = g.id_categoria ;
+
+-- right join
+select * from gastos g
+right join categorias c
+on c.id_categoria = g.id_categoria ;
