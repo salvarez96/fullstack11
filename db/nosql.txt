@@ -1,0 +1,13 @@
+// mostrar bases de datos
+show dbs
+
+//crear base de datos
+use biblioteca
+
+//mostrar colecciones
+show collections
+
+// crear base de datos en mongo
+use biblioteca
+db.createCollection("libros")
+
