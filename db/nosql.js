@@ -126,13 +126,13 @@ db.futbolistas.find({ edad: {$ne: 36} })
 // búsqueda con operadores de comparación, igual que
 db.futbolistas.find({ edad: {$eq: 36} })
 
-// buscar un registro cuyo nombre empiece por Mess
-db.futbolistas.find({ nombre: /^Mess/ })
+// buscar un registro cuyo apellido empiece por Mess
+db.futbolistas.find({ apellido: /^Mess/ })
 
-// buscar un registro cuyo nombre termine por ssi
-db.futbolistas.find({ nombre: /ssi$/ })
+// buscar un registro cuyo apellido termine por ssi
+db.futbolistas.find({ apellido: /ssi$/ })
 
-// buscar un registro cuyo nombre contenga la palabra Messi
-db.futbolistas.find({ nombre: /Messi/ })
+// buscar un registro cuyo apellido contenga la palabra Messi
+db.futbolistas.find({ apellido: /Messi/ })
 
 db.futbolistas.find({ pais: /olombia/ })
