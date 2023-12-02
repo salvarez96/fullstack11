@@ -13,7 +13,7 @@ h1 {
   margin-top: 40px;
 }
 
-.general-container {
+.generalContainer {
   width: 80%;
   min-width: 300px;
   margin: 20px auto 0;
@@ -27,13 +27,13 @@ form {
   width: 100%;
 }
 
-.items-container {
+.inputContainer {
   width: 80%;
   margin: 20px auto;
 }
 
-button, #item {
-  padding: calc(5rem / 16);
+button, .inputContainer-input {
+  padding: calc(6rem / 16) calc(9rem / 16);
   border: 1px solid black;
   border-radius: 5px;
   font-family: inherit;

@@ -9,15 +9,19 @@
 <body>
   <h1>Lista de compras</h1>
   <h5>Los precios son agregados aleatoriamente</h5>
-  <div class="general-container">
+  <div class="generalContainer">
     <form action="">
-      <div class="items-container">
-        <label for="item">Item:</label>
-        <input type="text" id="item" placeholder="Leche">
+      <div class="inputContainer">
+        <label for="productItem">Ingresa un producto:</label>
+        <input type="text" class="inputContainer-input" id="productItem" placeholder="Leche">
+      </div>
+      <div class="inputContainer">
+        <label for="productPrice">Ingresa el precio:</label>
+        $<input type="text" class="inputContainer-input" id="productPrice" placeholder="10">
       </div>
       <button type="button">Agregar</button>
     </form>
-    <ul id="items-list"></ul>
+    <ul id="itemsList"></ul>
   </div>
   <script src="/archivos-tarea/src/index.js"></script>
 </body>
