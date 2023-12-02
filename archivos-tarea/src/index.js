@@ -16,25 +16,33 @@ const submitButton = $('button')
 const productInput = $('#productItem')
 const priceInput = $('#productPrice')
 const itemsList = $('#itemsList')
+const cartTotal = $('#cartTotal')
 
 let productsList = []
 let productId = 0
+let grandTotal = 0
 
 submitButton.addEventListener('click', (e) => {
   e.preventDefault()
+  const productName = productInput.value
+  const productPrice = priceInput.value
 
-  if(productInput.value.length > 0) {
+  if(productName.length > 0 && productPrice.length > 0) {
     productsList.push({
       id: productId++,
-      product: productInput.value,
-      price: priceInput.value
+      product: productName,
+      price: parseInt(productPrice)
     })
-    // const productItemElement = elementCreator('li')
-    // productItemElement.innerText = productsList[productsList.length - 1]
-    // itemsList.insertAdjacentElement('beforeend', productItemElement)
-    
+
+    const productItemElement = elementCreator('li')
+    const productInfoElement = elementCreator('p')
+    productInfoElement.innerText = `${productName}: $${productPrice}`
+    productItemElement.appendChild(productInfoElement)
+    itemsList.insertAdjacentElement('beforeend', productItemElement)
+
+    grandTotal += productsList[productsList.length-1].price
+
+    cartTotal.innerText = grandTotal
   }
   console.log(productsList);
 })
-
-console.log('object');
