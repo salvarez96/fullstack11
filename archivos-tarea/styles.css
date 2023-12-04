@@ -38,3 +38,15 @@ button, .inputContainer-input {
   border-radius: 5px;
   font-family: inherit;
 }
+
+button {
+  margin: 0 5px;
+  transform: scale(1);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: aqua;
+  transform: scale(1.1);
+  transition: 0.2s transform ease-in;
+}
