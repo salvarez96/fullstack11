@@ -1,26 +1,29 @@
-function $(domElement) {
-  return document.querySelector(domElement)
-}
+const $ = (domElement) => document.querySelector(domElement)
 
-function $$(domElements) {
-  return document.querySelectorAll(domElements)
-}
+const $$ = (domElements) => document.querySelectorAll(domElements)
 
-function elementCreator(domElement, elementClass) {
+const elementCreator = (domElement, elementClass = undefined, elementId = undefined) => {
   const newElement = document.createElement(domElement)
-  newElement.classList.add(elementClass)
+
+  if (elementClass) newElement.classList.add(elementClass)
+  if (elementId) newElement.id = elementId
+
   return newElement
 }
 
+const generalContainer = $('.generalContainer')
 const submitButton = $('button')
 const productInput = $('#productItem')
 const priceInput = $('#productPrice')
 const itemsList = $('#itemsList')
 const cartTotal = $('#cartTotal')
+const cleanListButton = $('#cleanListButton')
 
 let productsList = []
 let productId = 0
 let grandTotal = 0
+
+productInput.focus()
 
 submitButton.addEventListener('click', (e) => {
   e.preventDefault()
@@ -29,14 +32,14 @@ submitButton.addEventListener('click', (e) => {
 
   if(productName.length > 0 && productPrice.length > 0) {
     productsList.push({
-      id: productId++,
+      id: ++productId,
       product: productName,
       price: parseInt(productPrice)
     })
 
     const productItemElement = elementCreator('li')
     const productInfoElement = elementCreator('p')
-    productInfoElement.innerText = `${productName}: $${productPrice}`
+    productInfoElement.innerText = `${productName}:..... $${productPrice}`
     productItemElement.appendChild(productInfoElement)
     itemsList.insertAdjacentElement('beforeend', productItemElement)
 
@@ -45,4 +48,17 @@ submitButton.addEventListener('click', (e) => {
     cartTotal.innerText = grandTotal
   }
   console.log(productsList);
+})
+
+cleanListButton.addEventListener('click', () => {
+  productsList = []
+  productId = 0
+  grandTotal = 0
+
+  itemsList.replaceChildren()
+
+  cartTotal.innerText = 0
+  productInput.value = ''
+  productInput.focus()
+  priceInput.value = ''
 })

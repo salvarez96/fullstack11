@@ -8,7 +8,6 @@
 </head>
 <body>
   <h1>Lista de compras</h1>
-  <h5>Los precios son agregados aleatoriamente</h5>
   <div class="generalContainer">
     <form action="">
       <div class="inputContainer">
@@ -20,6 +19,7 @@
         $<input type="text" class="inputContainer-input" id="productPrice" placeholder="10" required>
       </div>
       <button type="submit">Agregar</button>
+      <button type="button" id="cleanListButton">Limpiar Lista</button>
     </form>
     <p>Total carrito: $<span id="cartTotal">0</span></p>
     <ol id="itemsList"></ol>
